@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}
+  Info
+{% endblock %}
+{% block conteudo %}
+
+<body class="text-center">
+    <div class="container mt-5">
+      <form method="POST" class="form-register" action="">
+        {{ form.hidden_tag() }}
+        <h1 class="h3 mb-3 font-weight-normal">
+          Cadastro de Info
+        </h1>
+        <br>
+        
+        {{ form.marca.label() }}
+        {{ form.marca(class="form-control", placeholder="Marca") }}
+        
+        {{ form.desc.label() }}
+        {{ form.desc(class="form-control", placeholder="Descrição") }}
+        
+        {{ form.img.label() }}
+        {{ form.img(class="form-control", placeholder="Img URL") }}        
+        
+        <br>
+        {{ form.cadastrar1(class="btn btn-lg btn-block btn-primary") }}
+      </form>
+    </div>
+    </body>
+
+{% endblock %} 

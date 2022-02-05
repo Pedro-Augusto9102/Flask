@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}
+  Consulta
+{% endblock %}
+{% block conteudo %}
+          <!--<h1>Consulta</h1>-->
+          <div class="card ml-5 mr-5 mt-5" style="color: black;">
+            <div class="card-header">
+              Defeitos comuns
+            </div>
+            <div class="card-body">
+              {% for item in items %}
+                <h5 class="card-title">{{ item.id }}</h5>
+                <p class="card-text">{{ item.name }}</p>
+                <p class="card-text">{{ item.email }}</p>
+                <p class="card-text">{{ item.senha }}</p>                  
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="card ml-5 mr-5 mt-5" style="color: black;">
+            <div class="card-header">
+              Adicional
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Adicional</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>                  
+            </div>
+          </div>
+
+          <div class="card ml-5 mr-5 mt-5" style="color: black;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Imagem</p>
+            </div>
+          </div>
+{% endblock %}          
